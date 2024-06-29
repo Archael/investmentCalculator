@@ -19,7 +19,6 @@ body {
   margin: 3rem auto;
 }
 
-
 #header img {
   width: 5rem;
   height: 5rem;
@@ -86,4 +85,8 @@ body {
 
 .center {
   text-align: center;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
 }
