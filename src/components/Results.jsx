@@ -1,4 +1,5 @@
-function Results() {
+function Results({ input }) {
+  console.log(input);
   return (
     <div id="result">
       <div className="center">

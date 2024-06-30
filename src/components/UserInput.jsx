@@ -1,22 +1,4 @@
-import { useState } from 'react';
-
-function UserInput() {
-  // TODO: Add validation
-  const [userInput, setUserInput] = useState({
-    initialInvestment: 10000,
-    annualInvestment: 1200,
-    expectedReturn: 6,
-    duration: 10,
-  });
-  function handleChange(inputIdentifier, newValue) {
-    setUserInput((prevState) => {
-      return {
-        ...prevState,
-        [inputIdentifier]: newValue,
-      };
-    });
-  }
-
+function UserInput({ onChange, userInput }) {
   return (
     <section id="user-input">
       <div className="input-group">
@@ -27,7 +9,7 @@ function UserInput() {
             id="initial-investment"
             value={userInput.initialInvestment}
             required
-            onChange={(e) => handleChange('initialInvestment', e.target.value)}
+            onChange={(e) => onChange('initialInvestment', e.target.value)}
           />
         </div>
         <div className="mb-10">
@@ -37,7 +19,7 @@ function UserInput() {
             id="annual-investment"
             value={userInput.annualInvestment}
             required
-            onChange={(e) => handleChange('annualInvestment', e.target.value)}
+            onChange={(e) => onChange('annualInvestment', e.target.value)}
           />
         </div>
       </div>
@@ -49,7 +31,7 @@ function UserInput() {
             id="expected-return"
             value={userInput.expectedReturn}
             required
-            onChange={(e) => handleChange('expectedReturn', e.target.value)}
+            onChange={(e) => onChange('expectedReturn', e.target.value)}
           />
         </div>
         <div className="mb-10">
@@ -59,7 +41,7 @@ function UserInput() {
             id="duration"
             value={userInput.duration}
             required
-            onChange={(e) => handleChange('duration', e.target.value)}
+            onChange={(e) => onChange('duration', e.target.value)}
           />
         </div>
       </div>
