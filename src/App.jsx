@@ -16,7 +16,8 @@ function App() {
     setUserInput((prevState) => {
       return {
         ...prevState,
-        [inputIdentifier]: newValue,
+        // plus in front of newValue converts the string to a number
+        [inputIdentifier]: +newValue,
       };
     });
   }
