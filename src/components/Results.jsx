@@ -3,7 +3,7 @@ function Results({ input }) {
   const resultsData = calculateInvestmentResults(input);
   const initialInvestment = input.initialInvestment;
   return (
-    <div className="flex-center">
+    <>
       <h2>Results</h2>
       <table id="result">
         <thead>
@@ -34,7 +34,7 @@ function Results({ input }) {
           })}
         </tbody>
       </table>
-    </div>
+    </>
   );
 }
 
